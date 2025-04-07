@@ -1,0 +1,25 @@
+@TaskManagement_controller_HostAddress = http://localhost:5012
+
+GET {{TaskManagement_controller_HostAddress}}/Task
+Accept: application/json
+
+###
+POST {{TaskManagement_controller_HostAddress}}/Task/
+Content-Type: application/json
+{
+    "id": "11",
+    "name": "learning go",
+    "status": "ongoing"
+}
+
+###
+DELETE {{TaskManagement_controller_HostAddress}}/Task/11
+
+###
+PATCH {{TaskManagement_controller_HostAddress}}/Task/7
+Content-Type: application/json
+{
+    "id" : "10",
+    "name": "learning asp.net",
+    "status": "ongoing"
+}
